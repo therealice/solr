@@ -1,5 +1,17 @@
-var myFirebaseRef = new Firebase("https://solr.firebaseio.com/");
+(function() {
+    "use strict";
 
-myFirebaseRef.child("").on("value", function(snapshot) {
-    console.log(snapshot.val());
-});
+    angular.module('solr', ["firebase"]);
+
+    angular
+        .module('solr')
+        .controller('StatusController', StatusController);
+
+    StatusController.$inject = ['$scope', '$firebaseObject'];
+
+    function StatusController($scope, $firebaseObject) {
+        var firebaseRef = new Firebase("https://solr.firebaseio.com/");
+        $scope.status = $firebaseObject(firebaseRef);
+    }
+
+})();
