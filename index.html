@@ -13,12 +13,11 @@
 <body>
 
     <div class="status" ng-controller="StatusController">
-        <div class="full box" ng-if="status.timestamp">Previous check at: {{status.timestamp}}</div>
-        <div class="grow box" ng-class="value.ok ? 'isOK' : 'isError blink'" ng-repeat="(key, value) in status.servers">
+        <div class="full cell" ng-if="status.timestamp">Updated: {{status.timestamp}}</div>
+        <div class="grow cell" ng-class="value.ok ? 'isOK' : 'isError blink'" ng-repeat="(key, value) in status.servers">
             <div>{{key}}</div>
             <div class="huge" ng-if="value.ok">OK</div>
             <div class="huge" ng-if="!value.ok">ERROR</div>
-            <div>{{value.timestamp}}</div>
         </div>
     </div>
 
