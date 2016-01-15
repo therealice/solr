@@ -20,10 +20,16 @@
         return directive;
 
         function link(scope, element, attr) {
-            scope.timeago = moment(scope.time).fromNow();
+            var timeago = moment(scope.time);
+            if(timeago.isValid()) {
+                scope.timeago =  moment(scope.time).fromNow();
+            }
 
             $interval(function() {
-                scope.timeago = moment(scope.time).fromNow();
+                var timeago = moment(scope.time);
+                if(timeago.isValid()) {
+                    scope.timeago =  moment(scope.time).fromNow();
+                }
             }, 1000);
         }
     }
