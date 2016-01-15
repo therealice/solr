@@ -1,40 +1,17 @@
-.status {
-    display: flex;
-    flex-flow: row wrap;
+body {
+    font-size: 1.0em;
     box-sizing: border-box;
-    font-size: 1.4em;
 }
 
-.full {
+.flex-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-full {
     flex: 1 100%;
 }
 
-.grow {
+.flex-grow {
     flex: 2 auto;
-}
-
-.huge {
-    font-size: 2em;
-}
-
-.isOK {
-    background: #4c4;
-}
-
-.isError {
-    background: #c44;
-}
-
-.cell {
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-}
-
-.blink {
-    animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-    50% {background-color: #f00; }
 }

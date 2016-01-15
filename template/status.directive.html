@@ -1,0 +1,16 @@
+<div class="status flex-wrapper">
+
+    <div class="flex-full cell" ng-if="data.timestamp">
+        Last update received <div timeago data-time="data.timestamp"></div>
+    </div>
+
+    <div ng-repeat="(k, v) in data.servers" class="flex-grow cell" ng-class="v.ok ? 'isOK' : 'isError blink'">
+        <div>{{k}} is</div>
+        <div class="huge" ng-if="v.ok">OK</div>
+        <div class="huge" ng-if="!v.ok">NOT WORKING</div>
+        <div>
+            when checked <div timeago data-time="v.timestamp"></div>
+        </div>
+    </div>
+
+</div>

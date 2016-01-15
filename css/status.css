@@ -1,0 +1,29 @@
+.status {
+    font-size: 1.4em;
+}
+
+.status .huge {
+    font-size: 3.5em;
+}
+
+.status .cell {
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+}
+
+.status .isOK {
+    background: #4c4;
+}
+
+.status .isError {
+    background: #c44;
+}
+
+.status .blink {
+    animation: blinker 1s linear infinite;
+}
+
+.status @keyframes blinker {
+    50% {background-color: #f00; }
+}
