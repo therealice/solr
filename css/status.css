@@ -20,6 +20,10 @@
     background: #c44;
 }
 
+.status .howtofix {
+    font-size: 0.7em;
+}
+
 .status .blink {
     animation: blinker 1s linear infinite;
 }
